@@ -10,6 +10,7 @@ import androidx.compose.material3.Button
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
@@ -18,7 +19,8 @@ import androidx.compose.ui.unit.dp
 //             ¿Por qué ocurre esto? Agrega un comentario explicando el problema.
 @Composable
 fun ContadorScreen() {
-    var count = 0 // No funciona: ???
+    var count = 0  // No funciona: Al ser una variable "comun" osea var se reinicia cada vez que se
+    // recomponen los componentes, por lo tanto el contador no incrementa, siempre se muestra 0.
 
     Column(
         modifier = Modifier
